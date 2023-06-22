@@ -43,7 +43,7 @@ docker-compose build
 
 ### Criar o link simbolico:
 * para o nginx reconhecer o laravel
-* rode o comando:
+* rode o comando, dentro da pasta backend, fora do container:
 ```
 ln -s public html
 ```
