@@ -40,6 +40,13 @@ docker-compose build
 ```
 .env.example para novo arquivo .env
 ```
+
+### Criar o link simbolico:
+* para o nginx reconhecer o laravel
+* rode o comando:
+```
+ln -s public html
+```
 # Rodar o Projeto: 
 
 ## Entrar no container laravel:
