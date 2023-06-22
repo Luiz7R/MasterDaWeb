@@ -11,7 +11,7 @@
         <tbody>
           <tr v-for="produto in produtosPaginados.data" :key="produto.id">
             <th scope="row">{{ produto.nome }}</th>
-            <th scope="row">{{ produto.preco }}</th>
+            <th scope="row">R$ {{ produto.preco }}</th>
             <th scope="row">
               <button type="submit" class="add-to-cart btn btn-primary text-white" @click="adicionarCarrinho(produto)">
                 <font-awesome-icon :icon="['fas', 'cart-shopping']" />
@@ -59,6 +59,12 @@ export default {
       {
         this.$http.get(`produtos?page=${pagina}`)
           .then(response => {
+            const produtosValoresFormatados = response.data.data.map((produto) => {
+                return {
+                  preco: this.formatarValor(produto.preco),
+                  ...produto
+                }
+            });
             this.produtosPaginados = response.data
           })
       },
@@ -72,6 +78,9 @@ export default {
               .catch(error => console.error(error))
             this.notificacaoSwal()
         }
+      },
+      formatarValor(valor) {
+            return valor.toLocaleString('pt-br', {minimumFractionDigits: 2})
       },
       notificacaoSwal()
       {

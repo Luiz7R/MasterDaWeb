@@ -32,11 +32,6 @@
                 </router-link>
               </li>
               <li class="nav-item">
-                <router-link to="/sobre" class="nav-link text-white" style="margin-top: 2px;">
-                  Sobre
-                </router-link>
-              </li>
-              <li class="nav-item">
                 <router-link to="/carrinho" class="nav-link text-white">
                     <button type="button" class="btn btn-sm btn-gradient">
                       <font-awesome-icon :icon="['fas', 'cart-shopping']" /> 

@@ -76,6 +76,20 @@ php artisan db:seed
 
 ## Já contem produtos e usuários para usar o Projeto com facilidade =D
 
+<br>
+
+### Usuário Padrão:
+
+```
+email: johndoe@example.net
+password: 12345678
+```
+
+### Usuário Admin:
+```
+email: johndoe@admin.net
+password: 12345678
+```
 
 ### Após isso já esta configurado, basta acessar o frontend, pela endereço:
 
